@@ -2,12 +2,22 @@
   "manifest_version": 3,
   "name": "ForexCodes — Pine Script Validator",
   "version": "0.1.0",
-  "description": "Validate TradingView Pine Script for look-ahead bias, repainting and v6 hygiene from your toolbar. Free, runs locally — your code never leaves the browser.",
-  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "description": "Validate TradingView Pine Script for look-ahead bias, repainting & v6 issues — free, local, in your toolbar.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_title": "ForexCodes — validate your Pine Script",
-    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
-  "permissions": ["clipboardRead"]
+  "permissions": [
+    "clipboardRead"
+  ]
 }
