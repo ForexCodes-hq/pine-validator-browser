@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  :root { --bg:#0c1311; --panel:#111a17; --line:rgba(122,152,140,.2); --text:#e7ede9; --muted:#8c9c94; --green:#2fc98a; --crit:#e6644e; --amber:#e4a94a; }
+  * { box-sizing:border-box; }
+  body { width:380px; margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { padding:14px; }
+  .brand { font-weight:700; font-size:14px; letter-spacing:-.01em; }
+  .brand b { color:var(--green); }
+  .sub { color:var(--muted); font-size:11.5px; margin:2px 0 10px; }
+  textarea { width:100%; height:150px; resize:vertical; font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:11.5px; line-height:1.55; padding:10px; border:1px solid var(--line); border-radius:9px; background:#0e1613; color:var(--text); }
+  .row { display:flex; gap:8px; margin-top:9px; }
+  button { flex:1; cursor:pointer; padding:8px 10px; border-radius:8px; border:1px solid var(--line); background:transparent; color:var(--text); font-size:12.5px; }
+  button.primary { background:var(--green); color:#06110c; border-color:var(--green); font-weight:600; }
+  #out { margin-top:11px; }
+  .score { display:flex; align-items:center; gap:11px; }
+  .ring { width:46px; height:46px; border-radius:50%; border:3px solid var(--green); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:15px; flex:none; }
+  .lab { font-family:ui-monospace,monospace; font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); }
+  .f { border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:8px; padding:8px 10px; margin-top:7px; font-size:11.5px; }
+  .f .sev { font-family:ui-monospace,monospace; font-size:9px; text-transform:uppercase; }
+  .f .msg { color:var(--muted); margin-top:3px; line-height:1.5; }
+  a.full { display:block; text-align:center; margin-top:11px; color:var(--green); font-size:12.5px; text-decoration:none; border-top:1px solid var(--line); padding-top:10px; }
+  .disc { color:var(--muted); font-size:10px; margin-top:10px; line-height:1.5; }
+  .err { color:var(--crit); font-size:12px; margin-top:9px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">Forex<b>Codes</b> — Pine Validator</div>
+    <div class="sub">Look-ahead · repaint · v6 hygiene. Runs locally.</div>
+    <textarea id="code" placeholder="Paste your TradingView Pine Script here…" spellcheck="false"></textarea>
+    <div class="row">
+      <button id="paste">Paste from clipboard</button>
+      <button id="check" class="primary">Check</button>
+    </div>
+    <div id="out"></div>
+    <a class="full" href="https://forexcodes.com/audit" target="_blank" rel="noopener">Full audit — Health Score + fixes + shareable badge →</a>
+    <div class="disc">Code-correctness only — not financial advice, not a measure of profitability.</div>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
